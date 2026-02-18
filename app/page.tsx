@@ -72,10 +72,16 @@ export default function Home() {
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-3">
-                {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item, index) => (
+                {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(item.toLowerCase())}
+                    onClick={() => {
+                      if (item === 'Blog') {
+                        window.location.href = 'https://blog.skykintech.com/';
+                        return;
+                      }
+                      scrollToSection(item.toLowerCase());
+                    }}
                     className="relative group px-6 py-4 text-base font-bold transition-all duration-300 rounded-xl overflow-hidden"
                   >
                     {/* Background gradient on hover */}
@@ -111,10 +117,16 @@ export default function Home() {
         <div className={`md:hidden transition-all duration-300 ${isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
           } overflow-hidden bg-white/95 backdrop-blur-sm shadow-lg`}>
           <div className="px-4 pt-3 pb-4 space-y-2 border-t-2 border-blue-200">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
+            {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                onClick={() => {
+                  if (item === 'Blog') {
+                    window.location.href = 'https://blog.skykintech.com/';
+                    return;
+                  }
+                  scrollToSection(item.toLowerCase());
+                }}
                 className="relative group w-full text-left px-5 py-3 text-base font-bold transition-all duration-300 rounded-xl overflow-hidden border-2 border-transparent hover:border-blue-200 bg-gradient-to-r from-transparent to-transparent hover:from-blue-500/10 hover:to-blue-600/10"
               >
                 {/* Left accent bar */}
