@@ -561,7 +561,7 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
-              Clients We've Had the Pleasure to Work With
+              Partners We've Had the Pleasure to Work With
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -578,14 +578,14 @@ export default function Home() {
               { name: 'Client 6', image: '/images/clien6.jpeg' },
               { name: 'Client 7', image: '/images/clinet7.jpeg' }
             ].map((client, i) => (
-              <div 
+              <div
                 key={i}
                 className="group relative bg-white border border-blue-100 p-6 rounded-2xl hover:border-blue-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl flex items-center justify-center card-hover animate-scale-in overflow-hidden"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 {/* Top gradient bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-t-2xl"></div>
-                
+
                 <div className="relative w-full h-40 flex items-center justify-center">
                   <Image
                     src={client.image}
