@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   keywords: 'digital transformation, IT consulting, telecommunications, fintech, healthcare technology, agriculture technology, web development, mobile apps, enterprise solutions',
   authors: [{ name: 'SKYKIN Technologies' }],
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/images/sky.png',
+  },
 };
 
 export default function RootLayout({
